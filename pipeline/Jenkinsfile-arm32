@@ -7,7 +7,7 @@ node {
     }
     
     stage('Build image') {
-        app = docker.build("rocket357/beehive-kitchensink")
+        app = docker.build("rocket357/beehive")
     }
 
     stage('Push image') {

@@ -12,7 +12,7 @@ generate:
 	$(shell go env GOPATH)/bin/go-bindata --tags embed --pkg api -o api/bindata.go --ignore config/.git assets/... config/...
 
 go-bindata:
-	[ -f $(shell go env GOPATH)/bin/go-bindata ] || go get -u github.com/kevinburke/go-bindata/go-bindata
+	[ -f $(shell go env GOPATH)/bin/go-bindata ] || go install github.com/kevinburke/go-bindata/go-bindata
 
 embed: go-bindata generate build
 

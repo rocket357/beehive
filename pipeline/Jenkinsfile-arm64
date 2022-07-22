@@ -1,5 +1,4 @@
-node {
-    agent { label 'arm64' }
+node (label: 'arm64') {
     def app
 
     stage('Clone repository') {

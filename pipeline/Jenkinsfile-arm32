@@ -1,5 +1,4 @@
-node {
-    agent { label 'arm32' }
+node (label: 'arm32') {
     def app
 
     stage('Clone repository') {
